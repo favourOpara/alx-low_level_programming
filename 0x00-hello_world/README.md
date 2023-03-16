@@ -1,0 +1,2 @@
+#!/bin/bash
+CFILE="example.c"; cpp $CFILE -o c
