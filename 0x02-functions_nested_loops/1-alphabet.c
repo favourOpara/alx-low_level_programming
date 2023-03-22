@@ -6,14 +6,21 @@
  *Return: 0
  */
 
-int main(void)
-{
-	char c;
-	for (c = 'a'; c <= 'z'; ++c)
-	{
-        putchar(c);
-	}
-	putchar('\n');
-	return (0);
 
+void print_lower_alphabets() 
+{
+    char c = 'a';
+    while (c <= 'z') 
+    {
+        putchar(c);
+        c++;
+    }
+    putchar('\n');
 }
+
+int main() 
+{
+    print_lower_alphabets();
+    return 0;
+}
+
