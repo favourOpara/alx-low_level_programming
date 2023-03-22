@@ -14,28 +14,16 @@ int main(void)
 	putchar('2');
 	putchar(',');
 	putchar(' ');
-	for (int i = 0; i < 48; i++)
+	count += 2;
+	while (count < 50)
 	{
 		third = first + second;
-		int digits[10], num_digits = 0, temp = third;
-
-		while (temp > 0)
-		{
-			digits[num_digits] = temp % 10;
-			temp /= 10;
-			num_digits++;
-		}
-		for (int j = num_digits - 1; j >= 0; j--)
-		{
-			putchar(digits[j] + '0');
-		}
-		if (i < 47)
-		{
-			putchar(',');
-			putchar(' ');
-		}
+		printf("%d", third);
+		putchar(',');
+		putchar(' ');
 		first = second;
 		second = third;
+		count++;
 	}
 	putchar('\n');
 	return (0);
