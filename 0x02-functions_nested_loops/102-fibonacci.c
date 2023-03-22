@@ -6,7 +6,7 @@
 
 int main(void)
 {
-	int first = 1, second = 2, third, count = 0;
+	int first = 1, second = 2, third;
 
 	putchar('1');
 	putchar(',');
@@ -14,16 +14,29 @@ int main(void)
 	putchar('2');
 	putchar(',');
 	putchar(' ');
-	count += 2;
-	while (count < 50)
+	for (int i = 0; i < 48; i++)
 	{
 		third = first + second;
-		printf("%d", third);
-		putchar(',');
-		putchar(' ');
+		int num = third;
+
+		int digits = 0;
+
+		while (num > 0)
+		{
+			digits++;
+			num /= 10;
+		}
+		for (int j = 0; j < digits; j++)
+		{
+			putchar((third / (int) pow(10, digits - j - 1)) % 10 + '0');
+		}
+		if (i != 47)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 		first = second;
 		second = third;
-		count++;
 	}
 	putchar('\n');
 	return (0);
