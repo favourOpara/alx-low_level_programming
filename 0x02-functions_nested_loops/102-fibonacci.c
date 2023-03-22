@@ -17,20 +17,19 @@ int main(void)
 	for (int i = 0; i < 48; i++)
 	{
 		third = first + second;
-		int num = third;
+		int digits[10], num_digits = 0, temp = third;
 
-		int digits = 0;
-
-		while (num > 0)
+		while (temp > 0)
 		{
-			digits++;
-			num /= 10;
+			digits[num_digits] = temp % 10;
+			temp /= 10;
+			num_digits++;
 		}
-		for (int j = 0; j < digits; j++)
+		for (int j = num_digits - 1; j >= 0; j--)
 		{
-			putchar((third / (int) pow(10, digits - j - 1)) % 10 + '0');
+			putchar(digits[j] + '0');
 		}
-		if (i != 47)
+		if (i < 47)
 		{
 			putchar(',');
 			putchar(' ');
@@ -41,4 +40,3 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
-
