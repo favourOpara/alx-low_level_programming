@@ -6,21 +6,22 @@
  *Return: 0
  */
 
-
-void print_lower_alphabets() 
+int main(void)
 {
-    char c = 'a';
-    while (c <= 'z') 
-    {
-        putchar(c);
-        c++;
-    }
-    putchar('\n');
-}
+	void print_alphabet(void)
+	{
+		char c = 'a';
 
-int main() 
-{
-    print_lower_alphabets();
-    return 0;
+		while (c <= 'z')
+		{
+			putchar(c);
+			c++;
+		}
+		putchar('\n');
+	}
+	int main(void)
+	{
+		print_alphabet();
+		return (0);
+	}
 }
-
