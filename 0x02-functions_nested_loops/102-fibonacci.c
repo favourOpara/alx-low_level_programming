@@ -6,7 +6,7 @@
 
 int main(void)
 {
-	int first = 1, second = 2, third;
+	int first = 1, second = 2, third, count = 0;
 
 	putchar('1');
 	putchar(',');
