@@ -1,13 +1,16 @@
-#include<stdio.h>
-#include <ctype.h>
+#include "main.h"
 /**
  * main - Print digits
  * Return: 0
  */
-int main(void)
+int _isdigit(int c)
 {
-	int _isdigit(int c)
+	if ((c >= 0 && c <= 9) || (c >= 48 && c <= 58))
 	{
-		return _isdigit(c)
+		return (1);
+	}
+	else
+	{
+		return (0);
 	}
 }
