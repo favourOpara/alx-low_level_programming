@@ -1,23 +1,19 @@
-#include<stdio.h>
-#include<ctype.h>
+#include <stdio.h>
+#include "main.h"
+#include <ctype.h>
 /**
- * main - Print alphabets
+ * _isupper - Checks uppercase
  * Return: 0
  */
-
-int main(void)
+int _isupper(int c)
 {
-	int c;
-
-	int _isupper(int c);
+	if (c >= 65 && c <= 90)
 	{
-		if (c >= 'A' && c <= 'Z')
-		{
-			return (1);
-		}
-		else
-		{
-			return (0);
-		}
+		return (1);
 	}
+	else
+	{
+		return (0);
+	}
+	return (0);
 }
