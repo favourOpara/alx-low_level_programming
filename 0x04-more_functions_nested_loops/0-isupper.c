@@ -3,6 +3,7 @@
 #include <ctype.h>
 /**
  * _isupper - Checks uppercase
+ * @c: Variable text
  * Return: 0
  */
 int _isupper(int c)
