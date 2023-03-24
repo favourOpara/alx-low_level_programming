@@ -1,15 +1,16 @@
 #include "main.h"
 /**
- * print_numbers: To print numbers
+ *print_numbers - To print numbers
  * Return: 0
  */
+
 void print_numbers(void)
 {
 	int c;
-		
-	while (c > 10)
+
+	for (c = 48; c < 58; c++)
 	{
 		putchar(c);
-		c++;
 	}
+	putchar('\n');
 }
